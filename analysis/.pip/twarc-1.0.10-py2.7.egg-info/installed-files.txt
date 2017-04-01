@@ -1,0 +1,8 @@
+..\twarc.py
+..\twarc.pyc
+dependency_links.txt
+PKG-INFO
+requires.txt
+SOURCES.txt
+top_level.txt
+..\..\..\bin\twarc.py

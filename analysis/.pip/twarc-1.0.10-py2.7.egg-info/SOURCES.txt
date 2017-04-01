@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.cfg
+setup.py
+twarc.py
+bin/twarc
+requirements/python2.txt
+requirements/python3.txt
+twarc.egg-info/PKG-INFO
+twarc.egg-info/SOURCES.txt
+twarc.egg-info/dependency_links.txt
+twarc.egg-info/requires.txt
+twarc.egg-info/top_level.txt
