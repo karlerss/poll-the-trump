@@ -19,17 +19,15 @@ def init_db():
     # they will be registered properly on the metadata.  Otherwise
     # you will have to import them first before calling init_db()
     Base.metadata.create_all(bind=engine)
-    t = Tweet(1, 2, 3, 4, 5, 'et', '{}')
-    db_session().add(t)
 
 
 class Tweet(Base):
     __tablename__ = 'tweets'
-    id = Column(Integer, primary_key=True, autoincrement=False)
-    reply_id = Column(Integer, nullable=True)
+    id = Column(String(40), primary_key=True)
+    reply_id = Column(String(40), nullable=True)
     vote = Column(Integer)
     sentiment = Column(Float, default=0)
-    user_id = Column(Integer, nullable=False)
+    user_id = Column(String(40), nullable=False)
     country = Column(String(30), nullable=True)
     json = Column(JSON)
 

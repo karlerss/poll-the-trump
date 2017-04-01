@@ -10,11 +10,16 @@ RUN apt-get update \
   && pip install textblob \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir /trump
+RUN mkdir /trump && pip install -U flask-cors
 
 WORKDIR /trump
 
 ADD . /trump
+
+ENV FLASK_APP server.pyyy
+
+#ENTRYPOINT ["flask"]
+#CMD ["run"]
 
 # This Dockerfile doesn't need to have an entrypoint and a command
 # as Bitbucket Pipelines will overwrite it with a bash script.
